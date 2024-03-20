@@ -1,0 +1,28 @@
+[
+	{
+		"id": "1",
+		"area": "Area4",
+		"technicians": [
+			{
+				"id": "1",
+				"technician": "Lucchesi Marco",
+				"activities": [
+					{
+						"id": "1",
+						"activity": "TVM Viareggio"
+					},
+					{
+						"id": "2",
+						"activity": "Intesa Viareggio"
+					}
+				]
+			},
+			{
+				"id": "2",
+				"technician": "Giusfredi Giuseppe",
+				"activities": []
+			},
+			{}
+		]
+	}
+]
