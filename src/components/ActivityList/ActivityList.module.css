@@ -1,0 +1,7 @@
+.activityList {
+	display: flex;
+	flex-direction: column;
+	gap: 3px;
+	height: fit-content;
+	padding: 2px;
+}

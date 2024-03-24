@@ -1,0 +1,39 @@
+.technicianManagerContainer {
+	width: 860px;
+	border: 1px solid #000;
+	border-radius: 5px;
+	padding: 20px;
+	margin: 0 auto;
+	box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.1);
+	background: #f4fffd;
+	margin-bottom: 20px;
+}
+
+.technicianManagerInput {
+	border: 1px solid #011936;
+	border-radius: 20px;
+	width: 200px;
+	height: 30px;
+	background: #fff;
+	margin-right: 10px;
+	font-weight: 400;
+	font-size: 14px;
+	text-align: center;
+	color: #011936;
+}
+
+.technicianManagerButton {
+	border: 1px solid #011936;
+	border-radius: 20px;
+	background-color: transparent;
+	padding: 7px 15px;
+	font-weight: 400;
+	font-size: 14px;
+	text-align: center;
+	color: #011936;
+	text-transform: capitalize;
+}
+
+.technicianManagerButton:hover {
+	background-color: #f9dc5c;
+}

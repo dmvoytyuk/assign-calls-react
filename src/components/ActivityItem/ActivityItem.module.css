@@ -1,0 +1,10 @@
+.activityItem {
+	border: 1px solid #465362;
+	border-radius: 2px;
+	padding: 3px;
+	font-weight: 700;
+	font-size: 14px;
+	text-align: center;
+	color: #465362;
+	background-color: #f4fffd;
+}

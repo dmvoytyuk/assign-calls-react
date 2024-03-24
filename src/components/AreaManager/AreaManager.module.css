@@ -1,0 +1,29 @@
+.areaManagerInput {
+	border: 1px solid #011936;
+	border-radius: 20px;
+	width: 80px;
+	height: 30px;
+	background: #fff;
+	margin-right: 10px;
+	font-weight: 400;
+	font-size: 14px;
+	text-align: center;
+	color: #011936;
+	margin-bottom: 10px;
+}
+
+.areaManagerButton {
+	border: 1px solid #011936;
+	border-radius: 20px;
+	background-color: transparent;
+	padding: 7px 15px;
+	font-weight: 400;
+	font-size: 14px;
+	text-align: center;
+	color: #011936;
+	text-transform: capitalize;
+}
+
+.areaManagerButton:hover {
+	background-color: #f9dc5c;
+}

@@ -2,10 +2,11 @@
 	{
 		"id": "1",
 		"area": "Area4",
+		"active": true,
 		"technicians": [
 			{
 				"id": "1",
-				"technician": "Lucchesi Marco",
+				"name": "Lucchesi Marco",
 				"activities": [
 					{
 						"id": "1",
@@ -18,11 +19,25 @@
 				]
 			},
 			{
-				"id": "2",
-				"technician": "Giusfredi Giuseppe",
-				"activities": []
-			},
-			{}
+				"id": "21",
+				"name": "Giusfredi Giuseppe",
+				"activities": [
+					{
+						"id": "12",
+						"activity": "TVM Lucca"
+					},
+					{
+						"id": "13",
+						"activity": "Intesa Lucca"
+					}
+				]
+			}
 		]
+	},
+	{
+		"id": "2",
+		"area": "Area8",
+		"active": false,
+		"technicians": []
 	}
 ]
