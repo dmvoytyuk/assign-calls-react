@@ -3,3 +3,24 @@
 	flex-wrap: wrap;
 	gap: 10px;
 }
+
+.areaListButtons {
+	display: flex;
+	justify-content: space-between;
+}
+
+.areaListDeleteButton {
+	border: 1px solid #011936;
+	border-radius: 20px;
+	padding: 7px 15px;
+	background-color: transparent;
+	font-size: 14px;
+	font-weight: 700;
+	text-align: center;
+	color: #ed254e;
+	text-transform: capitalize;
+}
+
+.areaListDeleteButton:hover {
+	background-color: #f9dc5c;
+}
