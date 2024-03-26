@@ -23,6 +23,8 @@
 
 .technicianItemTop {
 	display: flex;
+	justify-content: center;
+	align-items: center;
 	background-color: #011936;
 	padding: 5px;
 }
@@ -34,11 +36,12 @@
 	background-color: transparent;
 	color: #fff;
 	border: none;
-	scale: 1.5;
+	padding: 0;
 }
 
 .technicianItemIcon {
 	transition: 0.1s linear;
+	scale: 1.5;
 }
 
 .technicianItemDeleteButton:hover .technicianItemIcon {
