@@ -37,3 +37,8 @@
 .technicianManagerButton:hover {
 	background-color: #f9dc5c;
 }
+
+.technicianManagerMessage {
+	color: #ed254e;
+	font-size: 12px;
+}
