@@ -25,7 +25,7 @@
 }
 
 .activityListForm {
-	display: none;
+	display: flex;
 	gap: 5px;
 	width: 100%;
 	background-color: #f9dc5c;
