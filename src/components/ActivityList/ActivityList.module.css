@@ -62,3 +62,7 @@
 	transition: ease-in-out 0.2s;
 	filter: drop-shadow(1px 1px 1px rgb(0 0 0 / 0.1));
 }
+
+.activityListButton:hover .activityListButtonIcon {
+	scale: 1.8;
+}
