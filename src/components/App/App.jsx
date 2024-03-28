@@ -147,8 +147,40 @@ function App() {
     setActivitiesList((currActivitiesList) => newActivitiesList);
   };
 
-  const deleteActivity = (activityId) => {
+  const deleteActivity = (activityId, technicianId) => {
     console.log("deleteActivity");
+
+    const currentTechnician = activeArea.technicians.find(
+      (technician) => technicianId === technician.id,
+    );
+
+    const newTechActivitiesList = currentTechnician.activities.filter(
+      (activity) => activity.id !== activityId,
+    );
+
+    const newTechnician = {
+      ...currentTechnician,
+      activities: [...newTechActivitiesList],
+    };
+
+    const newAreaTechnicianList = activeArea.technicians.map((technician) => {
+      if (technician.id === newTechnician.id) {
+        return newTechnician;
+      } else {
+        return technician;
+      }
+    });
+
+    const newActiveArea = { ...activeArea, technicians: newAreaTechnicianList };
+
+    const newActivitiesList = activitiesList.map((area) => {
+      if (area.active) {
+        return { ...area, ...newActiveArea };
+      }
+      return area;
+    });
+
+    setActivitiesList((currActivitiesList) => newActivitiesList);
   };
 
   const activeArea = activitiesList.find((area) => {

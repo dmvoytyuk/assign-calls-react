@@ -31,6 +31,7 @@ const ActivityList = ({
             <ActivityItem
               key={activity.id}
               activity={activity}
+              technicianId={technicianId}
               deleteActivity={deleteActivity}
             />
           );
