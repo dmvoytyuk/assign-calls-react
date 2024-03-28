@@ -1,5 +1,7 @@
 .technicianManagerContainer {
+	display: flex;
 	width: 860px;
+	max-height: 72px;
 	border: 1px solid #000;
 	border-radius: 5px;
 	padding: 20px;
@@ -13,7 +15,8 @@
 	border: 1px solid #011936;
 	border-radius: 20px;
 	width: 200px;
-	height: 30px;
+	/* height: 30px; */
+	padding: 7px 15px;
 	background: #fff;
 	margin-right: 10px;
 	font-weight: 400;
@@ -32,6 +35,7 @@
 	text-align: center;
 	color: #011936;
 	text-transform: capitalize;
+	flex-shrink: 0;
 }
 
 .technicianManagerButton:hover {

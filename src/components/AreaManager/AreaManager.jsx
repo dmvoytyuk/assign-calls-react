@@ -1,9 +1,9 @@
-import { Field, Form, Formik } from "formik";
+import { ErrorMessage, Field, Form, Formik } from "formik";
 import styles from "./AreaManager.module.css";
 import * as Yup from "yup";
 
 const validationScheme = Yup.object({
-  area: Yup.string().required("required"),
+  area: Yup.string().required("*Required"),
 });
 
 const AreaManager = ({ addArea }) => {
@@ -17,13 +17,20 @@ const AreaManager = ({ addArea }) => {
       onSubmit={submitAddArea}
       validationSchema={validationScheme}
     >
-      <Form>
-        <Field
-          className={styles.areaManagerInput}
-          type="text"
-          name="area"
-          placeholder="AreaX"
-        />
+      <Form className={styles.areaManagerForm}>
+        <div>
+          <Field
+            className={styles.areaManagerInput}
+            type="text"
+            name="area"
+            placeholder="AreaX"
+          />
+          <ErrorMessage
+            component="p"
+            className={styles.areaManagerMessage}
+            name="area"
+          />
+        </div>
         <button className={styles.areaManagerButton} type="submit">
           add area
         </button>

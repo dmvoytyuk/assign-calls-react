@@ -1,15 +1,20 @@
+.areaManagerForm {
+	display: flex;
+	margin-bottom: 20px;
+	max-height: 32px;
+}
+
 .areaManagerInput {
 	border: 1px solid #011936;
 	border-radius: 20px;
 	width: 80px;
-	height: 30px;
+	padding: 7px 15px;
 	background: #fff;
 	margin-right: 10px;
 	font-weight: 400;
 	font-size: 14px;
 	text-align: center;
 	color: #011936;
-	margin-bottom: 10px;
 }
 
 .areaManagerButton {
@@ -26,4 +31,9 @@
 
 .areaManagerButton:hover {
 	background-color: #f9dc5c;
+}
+
+.areaManagerMessage {
+	color: #ed254e;
+	font-size: 12px;
 }

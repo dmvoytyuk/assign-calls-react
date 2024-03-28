@@ -22,10 +22,10 @@ function App() {
     localStorage.setItem("activities", JSON.stringify(activitiesList));
   }, [activitiesList]);
 
-  const addArea = (area) => {
+  const addArea = ({ area }) => {
     const newArea = {
       id: nanoid(),
-      area: area.area,
+      area: area,
       active: false,
       technicians: [],
     };
@@ -87,6 +87,26 @@ function App() {
     setActivitiesList((currActivitiesList) => newActivitiesList);
   };
 
+  const deleteTechnician = (technicianId) => {
+    const newAreaTechnicianList = activeArea.technicians.filter(
+      (technician) => technician.id !== technicianId,
+    );
+
+    const newActiveArea = {
+      ...activeArea,
+      technicians: newAreaTechnicianList,
+    };
+
+    const newActivitiesList = activitiesList.map((area) => {
+      if (area.active) {
+        return { ...area, ...newActiveArea };
+      }
+      return area;
+    });
+
+    setActivitiesList((currActivitiesList) => newActivitiesList);
+  };
+
   const addActivity = (activity, technicianId) => {
     const newActivity = {
       id: nanoid(),
@@ -127,6 +147,10 @@ function App() {
     setActivitiesList((currActivitiesList) => newActivitiesList);
   };
 
+  const deleteActivity = (activityId) => {
+    console.log("deleteActivity");
+  };
+
   const activeArea = activitiesList.find((area) => {
     if (area.active) {
       return area;
@@ -155,6 +179,8 @@ function App() {
             <TechnicianList
               data={activeArea.technicians}
               addActivity={addActivity}
+              deleteActivity={deleteActivity}
+              deleteTechnician={deleteTechnician}
             />
           ) : (
             <p className={styles.appMessageTechnician}>*Add some technician</p>

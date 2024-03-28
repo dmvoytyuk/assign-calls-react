@@ -3,7 +3,7 @@ import * as Yup from "yup";
 import styles from "./TechnicianManager.module.css";
 
 const validationScheme = Yup.object({
-  name: Yup.string().min(3, "name too short").required("required"),
+  name: Yup.string().min(3, "name too short").required("*Required"),
 });
 
 const TechnicianManager = ({ area, addTechnician }) => {
@@ -19,13 +19,19 @@ const TechnicianManager = ({ area, addTechnician }) => {
       validationSchema={validationScheme}
     >
       <Form className={styles.technicianManagerContainer}>
-        <Field
-          className={styles.technicianManagerInput}
-          type="text"
-          name="name"
-          placeholder="John Doe"
-        />
-        <ErrorMessage className={styles.technicianManagerMessage} name="name" />
+        <div>
+          <Field
+            className={styles.technicianManagerInput}
+            type="text"
+            name="name"
+            placeholder="John Doe"
+          />
+          <ErrorMessage
+            className={styles.technicianManagerMessage}
+            component="p"
+            name="name"
+          />
+        </div>
         <button className={styles.technicianManagerButton} type="submit">
           add technician {area.area}
         </button>
